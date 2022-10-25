@@ -2,14 +2,14 @@
 {
     public static class TemperatureConversions
     {
-        public static double FtoC(double temperatureInF)
+        public static double FahrenheitToCelsius(double temperatureInF)
         {
             //T(°C) = (T(°F) - 32) × 5 / 9
             double temperatureInC = (temperatureInF - 32) * (5.0 / 9.0);
             return temperatureInC;
         }
 
-        public static double CtoF(double temperatureInC)
+        public static double CelsiusToFahrenheit(double temperatureInC)
         {
             //T(°F) = (T(°C) × 9 / 5) + 32
             double temperatureInF = (temperatureInC * (9.0 / 5.0)) + 32;

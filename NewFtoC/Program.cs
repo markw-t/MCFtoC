@@ -87,7 +87,7 @@ namespace Refactorings
             // directly
             //
 
-            return (fMin - 32) * (5.0 / 9.0);
+            return FahrenheitToCelsius(fMin);
         }
         private static double MinTempInF(List<double> cTemps)
         {
@@ -116,7 +116,7 @@ namespace Refactorings
                 }
             }
 
-            return (fMax - 32) * (5.0 / 9.0);
+            return FahrenheitToCelsius(fMax);
         }
         private static double MaxTempInF(List<double> cTemps)
         {
@@ -144,7 +144,7 @@ namespace Refactorings
             }
             fAve = fTot / fTemps.Count;
 
-            return (fAve - 32) * (5.0 / 9.0);
+            return FahrenheitToCelsius(fAve);
         }
 
         static double AveCTempInF(List<double> cTemps)
@@ -168,7 +168,7 @@ namespace Refactorings
             {
                 fTotal += f;
             }
-            return (fTotal - 32) * (5.0 / 9.0);
+            return FahrenheitToCelsius(fTotal);
         }
 
         static string ListTempsInC(List<double> fTemps)
