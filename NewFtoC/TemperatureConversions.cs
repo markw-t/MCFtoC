@@ -2,18 +2,32 @@
 {
     public static class TemperatureConversions
     {
-        public static double FtoC(double temperatureInF)
+        public static double FtoC(double temperatureInF, bool toggle)
         {
             //T(°C) = (T(°F) - 32) × 5 / 9
-            double temperatureInC = (temperatureInF - 32) * (5.0 / 9.0);
-            return temperatureInC;
+            if(toggle)
+            {
+                double temperatureInC = (temperatureInF - 32) * (5.0 / 9.0);
+                return temperatureInC;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
-        public static double CtoF(double temperatureInC)
+        public static double CtoF(double temperatureInC, bool toggle)
         {
             //T(°F) = (T(°C) × 9 / 5) + 32
-            double temperatureInF = (temperatureInC * (9.0 / 5.0)) + 32;
-            return temperatureInF;
+            if(toggle)
+            {
+                double temperatureInF = (temperatureInC * (9.0 / 5.0)) + 32;
+                return temperatureInF;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         /// <summary>
